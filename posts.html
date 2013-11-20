@@ -1,0 +1,14 @@
+---
+layout: post
+title:  Posts | Yan
+permalink: /posts/
+---
+
+<ul class="posts">
+<h1>Posts</h1>
+{% for post in site.posts %}
+	{% if post.categories contains 'posts' %}
+		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endif %}
+{% endfor %}
+</ul>
