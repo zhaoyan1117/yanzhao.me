@@ -1,0 +1,7 @@
+---
+layout: research
+title:  "SEJITS"
+permalink: /research/sejits/
+---
+
+my research about sejits

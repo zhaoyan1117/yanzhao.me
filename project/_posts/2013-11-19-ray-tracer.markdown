@@ -1,8 +1,7 @@
 ---
 layout: project
 title:  "Global Illumination Ray Tracer"
-categories: projects
-permalink: /projects/raytracer/
+permalink: /project/raytracer/
 ---
 
 This is my ray tracer.
