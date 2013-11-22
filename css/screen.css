@@ -120,11 +120,11 @@ a.core-nav:hover {
 
 #search input[type=text] {
   float: left;
-  width: 88%;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid black;
-  text-align: center;
+  width: 89%;
+  border: none;
+  outline: none;
+  border-bottom: 1px dashed black;
+  text-align: left;
 }
 
 #search input[type=submit] {
