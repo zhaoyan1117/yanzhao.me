@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://yanzhao.me/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://yanzhao.me/blog/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://yanzhao.me/project/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://yanzhao.me/culinary/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://yanzhao.me/about/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://yanzhao.me/blog/2013/11/20/Hello-Jekyll/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://yanzhao.me/blog/2013/09/20/Don%27t-like-work-in-vm%3F/</loc>
+  <lastmod>2013-11-22T01:10:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>
