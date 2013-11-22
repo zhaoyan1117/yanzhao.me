@@ -1,30 +1,44 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      
-        <title>{{ page.title }}</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width">
+---
+layout: base
+body_id: interior-page
+---
+<div id="header">
+  <ul>
+    <li>
+      <a class="core-nav icon-quill" href="/blog" title="Yan Zhao - Blog"></a>
+    </li>
+    <li>
+      <a class="core-nav icon-stack" href="/project" title="Yan Zhao - Project"></a>
+    </li>
+    <li>
+      <a class="core-nav icon-github" href="http://github.com/zhaoyan1117" title="Yan Zhao - zhaoyan1117 on GitHub"></a>
+    </li>
+    <li>
+      <a class="core-nav icon-food" href="/culinary" title="Yan Zhao - Culinary"></a>
+    </li>
+    <li>
+      <a class="core-nav icon-info" href="/about" title="Yan Zhao - About"></a>
+    </li>
+    <li>
+      <a class="core-nav icon-search" id="search-icon" href="#" title="Search yanzhao.me"></a>
+    </li>
+  </ul>
+  <div style="clear:both"></div>
+  <div id="search">
+    <form action="http://www.google.com/cse" id="cse-search-box" style="display:none;">
+      <div>
+        <input type="hidden" name="cx" value="017017719923970963940:ggcsf-ihsqm" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" name="q" width="100%"/>
+        <input type="submit" name="sa" value="Search" />
+      </div>
+    </form>
+    <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+  </div>
+</div>
+<div style="clear:both"></div>
+<div id="content">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  {{ content }}
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-
-          {% include header.html %}
-
-          {{ content }}
-
-          {% include footer.html %}
-
-        </div>
-
-    </body>
-</html>
+</div>
