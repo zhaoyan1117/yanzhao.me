@@ -3,3 +3,22 @@ layout: default
 title: "Yan Zhao - About"
 ---
 # About
+
+<img src="../images/me.jpg" class="inline-left" width="96" height="128">
+
+My name is Yan Zhao. I am currently a junior at [UC Berkeley](http://www.berkeley.edu/) studying [Electrical Engineering and Computer Science](http://www.eecs.berkeley.edu). I am originally from China and have spent my first 17 years in this beautiful north eastern city - [Changchun](http://en.wikipedia.org/wiki/Changchun).
+
+In the academic field, I am interested in [Computer Graphics][CG], [HPC][HPC], and [SaaS Development][SaaS].
+
+With many backend experiences in [Ruby on Rails](http://rubyonrails.org), I am building my skills in front-end development and working on my way to become a full-stack engineering.
+
+In my spare time (though very little), I would like to explore in the [culinary](/culinary) world, especially traditional Chinese food.
+
+If you are interested in my work and want to learn more, feel free to [shoot me an email](mailto:zhaoyan1117@gmail.com). Or if you want to take a look of my reume, please [contact][resume_request] me and I will get back to you.
+
+<!-- TODO: Update link to projects.-->
+
+[CG]: http://en.wikipedia.org/wiki/Computer_graphics
+[HPC]: http://en.wikipedia.org/wiki/High-performance_computing
+[SaaS]: http://en.wikipedia.org/wiki/Software_as_a_service
+[resume_request]: mailto:zhaoyan1117@gmail.com?subject=[Resume]&body=I%20would%20like%20a%20copy%20of%20your%20resume.%0A%0AThanks.

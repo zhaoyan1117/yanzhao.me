@@ -146,6 +146,9 @@ a.core-nav:hover {
   font-size: small;
 }
 
+#content h1 {
+}
+
 #content h2, #content h3 {
   margin: .5em 0;
 }
