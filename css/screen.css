@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -301,4 +302,15 @@ td span.event-title {
 
 td span.event-date {
   font-size: 85%;
+}
+
+#project_list ul {
+  list-style-type: none;
+  margin: 20px;
+  font-size: 120%;
+}
+
+#project_list li {
+  padding: 15px;
+  text-align: left;
 }
