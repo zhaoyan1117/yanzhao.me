@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Yan Zhao - Blog"
+title: "Blog"
 ---
 {% assign latest_post = site.categories.blog.first %}
 {% capture latest_post_title_with_proper_escaping %}{{ latest_post.title | xml_escape }}{% endcapture %}
 
 <div id="post">
-  <h1><a href="{{ latest_post.url }}" title="{{ latest_post_title_with_proper_escaping }}">{{ latest_post_title_with_proper_escaping }}</a></h1>
+  <div id="recent_post_header"><a href="{{ latest_post.url }}" title="{{ latest_post_title_with_proper_escaping }}">{{ latest_post_title_with_proper_escaping }}</a></div>
 
   {% if latest_post.date != null %}
     <span class="published_on">
@@ -31,15 +31,15 @@ title: "Yan Zhao - Blog"
 </div>
 
 <div id="archive">
-  <h1><a name="archive" href="#archive" title="Blog Archive">Archive</a></h1>
+  <div id="archive_title"><a name="archive" href="#archive" title="Blog Archive">Archive</a></div>
 
-  <p>Now that you've whetted your appetite with the <a href="{{ latest_post.url }}" title="{{ latest_post.post_title_label }}{{ latest_post_title_with_proper_escaping }}">most recent post</a>, perhaps you'd care to dig into the archive.</p>
+  <div id="archive_desc">Now that you've whetted your appetite with the <a href="{{ latest_post.url }}" title="{{ latest_post.post_title_label }}{{ latest_post_title_with_proper_escaping }}">most recent post</a>, perhaps you'd care to dig into the archive.</div>
 
-  <ul class="posts">
+  <div class="posts">
     {% for post in site.categories.blog %}
       {% if post != latest_post %}
-        {% include post-li.html %}
+        {% include post-div.html %}
       {% endif %}
     {% endfor %}
-  </ul>
+  </div>
 </div>

@@ -1,6 +1,5 @@
 ---
 layout: post
-tags:
-- Jekyll
-- Blog
+tags: [Jekyll, Blog]
 ---
+

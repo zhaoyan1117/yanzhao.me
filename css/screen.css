@@ -272,15 +272,11 @@ ul.posts .title {
 }
 
 .post-footer {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-top: 1px solid #BBBBBB;
   border-bottom: 1px solid #BBBBBB;
   font-size: 110%;
-}
-
-#archive h1 {
-  margin-top: 0.8em;
 }
 
 blockquote p.attribution {
@@ -329,9 +325,27 @@ td span.event-date {
   float: right;
 }
 
+#recent_post_header {
+  font-size: 200%;
+  font-weight: bold;
+}
 
+#archive_title {
+  margin-top: 20px;
+  font-size: 170%;
+}
 
+#archive_desc {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+.each_post {
+  padding-bottom: 5px;
+}
 
+.each_post .title {
+  font-size: 120%;
+}
 
 
