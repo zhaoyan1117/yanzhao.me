@@ -349,3 +349,27 @@ td span.event-date {
 }
 
 
+
+
+
+
+
+
+
+
+.food_container {
+  width: 50%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.food_container img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
