@@ -13,6 +13,5 @@ $(document).ready(function () {
 	    })
 		is_down = false;
 	};      
-    return false;
   });
 });

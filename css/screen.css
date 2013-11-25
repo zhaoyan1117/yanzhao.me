@@ -304,13 +304,34 @@ td span.event-date {
   font-size: 85%;
 }
 
-#project_list ul {
-  list-style-type: none;
-  margin: 20px;
-  font-size: 120%;
+#project_list {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#project_list li {
-  padding: 15px;
+#project_list {
+  font-size: 130%;
+}
+
+.each_project {
+  padding-bottom: 30px;
   text-align: left;
 }
+
+.project_description {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  visibility: hidden;
+  font-size: 85%;
+}
+
+.project_lang_photo {
+  float: right;
+}
+
+
+
+
+
+
+

@@ -4,6 +4,5 @@ $(document).ready(function () {
     var uriEncodedTag = encodeURI($(this).text());
     var tagUrl = googleCseUrl + "&q=" + uriEncodedTag;
     window.location.href = tagUrl;
-    return false;
   });
 });
