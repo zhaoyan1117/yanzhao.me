@@ -1,5 +1,39 @@
 ---
 layout: default
 title: "Culinary"
+
+left:
+- hongShaoRou
+- chaoXiaoBaiCai
+
+right:
+- niuWeiMian
+- xiangChaoPaiGu
 ---
+
 <h1>Culinary</h1>
+
+<div class="culinary_desc">
+  Below are some Chinese cuisine I made, photo credit to my roommate 
+  <a href="http://www.linkedin.com/in/achen502">Aaron</a>.
+</div>
+
+<div class="food_folio">
+
+  <div class="food_column">
+  {% for f in page.left %}
+    <div class="food_container">
+      <img src="images/{{f}}.png">
+    </div>
+  {% endfor %}
+  </div>
+
+  <div class="food_column">
+  {% for f in page.right %}
+    <div class="food_container">
+      <img src="images/{{f}}.png">
+    </div>
+  {% endfor %}
+  </div>
+
+</div>
