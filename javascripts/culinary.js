@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+  $(window).load(function(){
+    $('.food_folio').fadeIn(1000);
+  });
+
   $(".food_container").hover(
     function(){
       $(this).stop().animate({
