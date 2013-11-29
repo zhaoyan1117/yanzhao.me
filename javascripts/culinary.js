@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
   $(window).load(function(){
-    $('.food_folio').fadeIn(1000);
+    $('.food_loading').fadeOut(500);
+    $('.food_folio').delay(500).fadeIn(1000);
   });
 
   $(".food_container").hover(

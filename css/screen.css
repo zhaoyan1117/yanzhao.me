@@ -24,7 +24,7 @@ body {
   width: 40em;
   margin-left: auto;
   margin-right: auto;
-	font-family: "Trebuchet MS", Helvetica, Arial sans-serif;
+  font-family: "Trebuchet MS", Helvetica, Arial sans-serif;
   font-size-adjust: none;
   font-style: normal;
   font-variant: normal;
@@ -65,19 +65,19 @@ blockquote {
 }
 
 table {
-	border: 0;
-	border-collapse: separate;
-	border-spacing: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 td, th {
-	padding: 7px;
-	border-bottom: solid 1px #ddd;
+  padding: 7px;
+  border-bottom: solid 1px #ddd;
 }
 
 th {
-	font-weight: bold;
-	border-bottom: solid 2px #ccc;	
+  font-weight: bold;
+  border-bottom: solid 2px #ccc;  
 }
 
 a.core-nav {
@@ -229,17 +229,17 @@ a.core-nav:hover {
 }
 
 .published_on {
-	margin-bottom: 1em;
-	font-size: .8em;
-	font-weight: normal;
-	display: block;
+  margin-bottom: 1em;
+  font-size: .8em;
+  font-weight: normal;
+  display: block;
 }
 
 ul.posts {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0em;
-	text-indent: -1.5em;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0em;
+  text-indent: -1.5em;
 }
 
 ul.posts li {
@@ -285,7 +285,7 @@ blockquote p.attribution {
 
 td span.event-title {
   font-weight: bold;
-	display: block;
+  display: block;
 }
 
 td span.event-date {
@@ -344,8 +344,28 @@ td span.event-date {
   font-size: 120%;
 }
 
+@-webkit-keyframes loading {
+  0% { -webkit-transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes loading {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.food_loading {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0 0 .25em rgba(255,255,255, .3);
+  -webkit-animation: loading 1.5s infinite linear;
+          animation: loading 1.5s infinite linear;
+}
+
 .food_folio {
   margin-top: 10px;
+  display: none;
 }
 
 .food_column {
