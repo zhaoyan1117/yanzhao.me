@@ -1,0 +1,14 @@
+---
+permalink: culinary/2/
+
+food:
+- xiangChaoPaiGu
+---
+
+{% for f in page.food %}
+	<div class="food_container">
+		<div class="food_img">
+			<img src="images/{{f}}.png">
+		</div>
+	</div>
+{% endfor %}

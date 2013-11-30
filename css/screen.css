@@ -294,6 +294,16 @@ td span.event-date {
 
 
 
+
+
+
+
+
+
+
+
+
+
 #project_list {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -314,8 +324,6 @@ td span.event-date {
   visibility: hidden;
   font-size: 85%;
 }
-
-
 
 .project_lang_photo {
   float: right;
@@ -355,7 +363,8 @@ td span.event-date {
 }
 
 .food_loading {
-  margin-top: 50px;
+  display: none;
+  margin-top: 10px;
   text-align: center;
   font-size: 2em;
   text-shadow: 0 0 .25em rgba(255,255,255, .3);
@@ -365,25 +374,28 @@ td span.event-date {
 
 .food_folio {
   margin-top: 10px;
-  display: none;
-}
-
-.food_column {
-  position:relative;
-  margin-left: 7px;
-  width: 48%;
-  display: inline-block;
 }
 
 .food_container {
-  box-shadow: 0px 0px 10px rgba(150,150,150,1.0);
   width: 100%;
   height: auto;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
-.food_container img {
+.food_img {
+  box-shadow: 0px 0px 10px rgba(150,150,150,1.0);
+}
+
+.food_img img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.food_desc {
+  font-size: 150%;
+}
+
+.food_end {
+  text-align: center;
 }

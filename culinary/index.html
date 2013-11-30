@@ -1,14 +1,7 @@
 ---
 layout: default
 title: "Culinary"
-
-left:
-- hongShaoRou
-- chaoXiaoBaiCai
-
-right:
-- niuWeiMian
-- xiangChaoPaiGu
+total_food: 3
 ---
 
 <h1>Culinary</h1>
@@ -18,24 +11,7 @@ right:
   <a href="http://www.linkedin.com/in/achen502">Aaron</a>.
 </div>
 
+<div class="food_amount hidden" data-value="{{page.total_food}}"></div>
+<div class="food_folio"></div>
+
 <div class="food_loading icon-spinner"></div>
-
-<div class="food_folio">
-
-  <div class="food_column">
-  {% for f in page.left %}
-    <div class="food_container">
-      <img src="images/{{f}}.png">
-    </div>
-  {% endfor %}
-  </div>
-
-  <div class="food_column">
-  {% for f in page.right %}
-    <div class="food_container">
-      <img src="images/{{f}}.png">
-    </div>
-  {% endfor %}
-  </div>
-
-</div>
