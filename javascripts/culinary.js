@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   function loading_food () {
     if (!already_loading && current_food <= total_food) {
-      $('.food_loading').fadeIn(250);
+      $('.food_loading').fadeIn(500);
       already_loading = true;
       $.ajax({
         url:"/culinary/"+current_food+"/",
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   $(window).load(loading_food);
   $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    if($(window).scrollTop() + $(window).height() >= $(document).height()*0.99) {
       loading_food();
     }
   });
