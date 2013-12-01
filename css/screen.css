@@ -362,6 +362,12 @@ td span.event-date {
   100% { transform: rotate(360deg); }
 }
 
+
+.culinary_desc {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .food_loading {
   display: none;
   margin-top: 10px;
