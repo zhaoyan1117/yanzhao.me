@@ -8,7 +8,7 @@ $(document).ready(function() {
     if (current_food > total_food) {
       $(window).unbind('scroll');
       var food_end = '<div class="food_end">----------- more will be served -----------</div>'
-      var fade_time = 500;
+      var fade_time = 1000;
       $('.food_loading').fadeOut(fade_time);
       $(food_end).hide().appendTo(".food_folio").delay(fade_time).fadeIn(fade_time);
     }
