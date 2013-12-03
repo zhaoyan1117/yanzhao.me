@@ -369,11 +369,17 @@ td span.event-date {
 }
 
 .food_loading {
-  display: none;
+  width: 20px;
+  height: 20px;
   margin-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   text-shadow: 0 0 .25em rgba(255,255,255, .3);
+}
+
+.food_loading_spinning {
   -webkit-animation: loading 1.5s infinite linear;
           animation: loading 1.5s infinite linear;
 }
@@ -391,5 +397,6 @@ img.food_img {
 }
 
 .food_end {
+  height: 20px;
   text-align: center;
 }

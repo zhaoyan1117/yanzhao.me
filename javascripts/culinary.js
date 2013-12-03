@@ -6,19 +6,31 @@ $(document).ready(function() {
 
   function check_all_loaded () {
     if (current_food > total_food) {
-      var food_end = '<div class="food_end">----------- more will be served -----------</div>'
-      $(food_end).hide().appendTo(".food_folio").fadeIn(1000);
       $(window).unbind('scroll');
+      var food_end = '<div class="food_end">----------- more will be served -----------</div>'
+      $('.food_loading').fadeOut(1000);
+      $(food_end).hide().appendTo(".food_folio").delay(1000).fadeIn(1000);
     }
+  }
+
+  function start_spinning () {
+    $('.food_loading').removeClass('food_loading_spinning');
+  }
+
+
+  function stop_spinning () {
+    $('.food_loading').addClass('food_loading_spinning');
   }
 
   function loading_food () {
     if (!already_loading && current_food <= total_food) {
       already_loading = true;
+      start_spinning();
       var food_img = $("<img class='food_img' />").attr('src', '/culinary/images/'+current_food+'.png')
         .load(function() {
           $(food_img).hide().appendTo(".food_folio").fadeIn(1000);
           current_food++;
+          stop_spinning();
           already_loading = false;
       });
     }
@@ -29,6 +41,7 @@ $(document).ready(function() {
   function init_loading_food () {
     if (!already_loading && current_food <= total_food) {
       already_loading = true;
+      start_spinning();
       var food_img_1 = $("<img class='food_img' />").attr('src', '/culinary/images/'+current_food+'.png')
         .load(function() {
           current_food++;
@@ -37,6 +50,7 @@ $(document).ready(function() {
               current_food++;
               $(food_img_1).hide().appendTo(".food_folio").fadeIn(1000);
               $(food_img_2).hide().appendTo(".food_folio").fadeIn(1000);
+              stop_spinning();
               already_loading = false;
             });
       });
