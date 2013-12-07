@@ -326,7 +326,13 @@ td span.event-date {
 .show_proj_desc {
   font-size: 110%;
   line-height: 1.5em;
+  text-align: justify;
   margin-bottom: 10px;
+}
+
+.show_proj_desc a {
+  color: black;
+  text-decoration: underline;
 }
 
 .show_proj_lang {
@@ -336,14 +342,8 @@ td span.event-date {
 
 .show_proj_content {
   border-top: 1px solid #BBBBBB;
+  font-size: 110%;
 }
-
-
-
-
-
-
-
 
 #recent_post_header {
   font-size: 200%;
@@ -377,7 +377,6 @@ td span.event-date {
   0% { transform: rotate(0); }
   100% { transform: rotate(360deg); }
 }
-
 
 .culinary_desc {
   margin-top: 10px;
