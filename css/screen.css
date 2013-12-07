@@ -294,22 +294,9 @@ td span.event-date {
 
 
 
-
-
-
-
-
-
-
-
-
-
 #project_list {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-#project_list {
   font-size: 130%;
 }
 
@@ -328,6 +315,35 @@ td span.event-date {
 .project_lang_photo {
   float: right;
 }
+
+
+.show_proj_name {
+  text-align: center;
+  font-size: 130%;
+  margin-bottom: 10px;
+}
+
+.show_proj_desc {
+  font-size: 110%;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+
+.show_proj_lang {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.show_proj_content {
+  border-top: 1px solid #BBBBBB;
+}
+
+
+
+
+
+
+
 
 #recent_post_header {
   font-size: 200%;

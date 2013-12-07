@@ -1,3 +1,22 @@
 ---
 layout: default
 ---
+
+<div class='show_proj_name'>
+	{{ page.name }}
+</div>
+
+<div class='show_proj_lang'>
+	{% for l in page.lang %}
+		<img src="/images/logos/{{l}}.png" height="30" width"30">
+	{% endfor %}  
+</div>
+
+<div class='show_proj_desc'>
+	{{ page.description }}
+</div>
+
+
+<div class='show_proj_content'>
+	{{ content }}
+</div>
