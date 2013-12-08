@@ -301,7 +301,6 @@ td span.event-date {
 }
 
 .each_project {
-  padding-bottom: 30px;
   text-align: left;
 }
 
@@ -313,7 +312,7 @@ td span.event-date {
 }
 
 .project_lang_photo {
-  float: right;
+  text-align: right;
 }
 
 
