@@ -4,13 +4,13 @@ title: "About"
 ---
 # About
 
-<img src="../images/me.jpg" class="inline-left" width="96" height="128">
+<img src="../images/me_min.jpg" class="inline-left" width="96" height="128">
 
 My name is Yan Zhao. I am currently a junior at [UC Berkeley](http://www.berkeley.edu/) studying [Electrical Engineering and Computer Science](http://www.eecs.berkeley.edu). I am originally from China and have spent my first 17 years in this beautiful north eastern city - [Changchun](http://en.wikipedia.org/wiki/Changchun).
 
 In the academic field, I am interested in [Computer Graphics][CG], [High-performance Computing][HPC], and [SaaS Development][SaaS].
 
-With many backend experiences in [Ruby on Rails](http://rubyonrails.org), I am building my skills in front-end development and working on my way to become a full-stack engineering.
+With many backend experiences in [Ruby on Rails](http://rubyonrails.org), I am building my skills in front-end development and working on my way to become a full-stack engineer.
 
 In my spare time (though very little), I would like to explore in the [culinary](/culinary) world, especially traditional Chinese food.
 
