@@ -1,0 +1,14 @@
+<div class="notice_banner">
+	<div class="notice_msg" id='notice_msg'>
+		The content and layout of this page is still under construction.
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		if ($('#notice_msg').text().trim() != '') {
+			$('#notice_msg').fadeIn(300);
+			$('#notice_msg').delay(3000).fadeOut(300);
+		};
+	});
+</script>
