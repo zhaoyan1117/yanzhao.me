@@ -14,7 +14,7 @@ With many backend experiences in [Ruby on Rails](http://rubyonrails.org), I am b
 
 In my spare time (though very little), I would like to explore in the [culinary](/culinary) world, especially traditional Chinese food.
 
-If you are interested in my work and want to learn more, feel free to [shoot me an email](mailto:zhaoyan1117@gmail.com). Or if you want to take a look at my reume, please [contact][resume_request] me and I will get back to you.
+If you are interested in my work and want to learn more, feel free to [drop me a line](mailto:zhaoyan1117@gmail.com). Or if you want to take a look at my reume, please [contact][resume_request] me and I will get back to you.
 
 <!-- TODO: Update link to projects.-->
 
