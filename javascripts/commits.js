@@ -20,7 +20,7 @@ function displayCommit() {
 
 	$('#recent_commits').slideDown(animation_time);
     $('.refresh_commits').removeClass('loading_spinning');
-	already_loading = false;
+	loading_commits = false;
 }
 
 function addCommit(commit) {
@@ -71,18 +71,19 @@ function updateCommits(events) {
 }
 
 function showCommits() {
+	if (!loading_commits) {
+		$('.refresh_commits').addClass('loading_spinning');
+		loading_commits = true;
 
-    $('.refresh_commits').addClass('loading_spinning');
-
-	commits = [];
-    $.ajax({
-      type:"GET",
-      url:"https://api.github.com/users/zhaoyan1117/events/public",
-      dataType:"json",
-      success: function(data, textStatus, jqXHR){
-      	pushEvents = data.filter(function(e) {return e.type == 'PushEvent'});
-      	updateCommits(pushEvents);
-      }
-    });
-
+		commits = [];
+		$.ajax({
+		  type:"GET",
+		  url:"https://api.github.com/users/zhaoyan1117/events/public",
+		  dataType:"json",
+		  success: function(data, textStatus, jqXHR){
+		  	pushEvents = data.filter(function(e) {return e.type == 'PushEvent'});
+		  	updateCommits(pushEvents);
+		  }
+		});
+	}
 }

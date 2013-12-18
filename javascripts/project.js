@@ -27,15 +27,8 @@ $(document).ready(function () {
 		}
 	);
 
-	showCommits();
-
 	loading_commits = false;
-	$(".refresh_commits").click(function() {
-		if (!loading_commits) {
-			loading_commits = true;
-			showCommits();
-		}
-	});
+	$(".refresh_commits").click(showCommits);
 
 	$(".refresh_commits").hover(function() {
 		if (!loading_commits) {
@@ -45,4 +38,5 @@ $(document).ready(function () {
 		$(this).css({"color": "black"});
 	});
 
+	showCommits();
 });
