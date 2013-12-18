@@ -2,26 +2,31 @@
 layout: default
 title: "Project"
 ---
-<h1>Recent Commits</h1>
+<div id="commit_header">
+  <div id="commit_header_title">Recent Commits</div><div class="refresh_commits icon-spinner"></div>
+</div>
+
 <div id="recent_commits"></div>
 
-<h1>Project</h1>
-<div id="project_list">
-  {% for post in site.categories.project %}
-    <div class="each_project">
-      <a href="{{post.url}}">
-        <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>  
-      </a>
-    
-      <div class="project_description" id="{{post.display_id}}">
-        {{post.short_desc}}
-        <div class="project_lang_photo">
-          {% for l in post.lang %}
-            <img src="../images/logos/{{l}}.png" height="35" width"35">
-          {% endfor %}  
-        </div>
-      </div>  
-    </div>
-  {% endfor %}
-  </ul>
+<div id="project">
+  <h1>Project</h1>
+  <div id="project_list">
+    {% for post in site.categories.project %}
+      <div class="each_project">
+        <a href="{{post.url}}">
+          <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>  
+        </a>
+      
+        <div class="project_description" id="{{post.display_id}}">
+          {{post.short_desc}}
+          <div class="project_lang_photo">
+            {% for l in post.lang %}
+              <img src="../images/logos/{{l}}.png" height="35" width"35">
+            {% endfor %}  
+          </div>
+        </div>  
+      </div>
+    {% endfor %}
+    </ul>
+  </div>
 </div>

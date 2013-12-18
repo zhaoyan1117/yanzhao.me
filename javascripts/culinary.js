@@ -15,12 +15,12 @@ $(document).ready(function() {
   }
 
   function start_spinning () {
-    $('.food_loading').addClass('food_loading_spinning');
+    $('.food_loading').addClass('loading_spinning');
   }
 
 
   function stop_spinning () {
-    $('.food_loading').removeClass('food_loading_spinning');
+    $('.food_loading').removeClass('loading_spinning');
   }
 
   function loading_food () {

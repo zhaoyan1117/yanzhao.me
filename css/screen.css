@@ -292,7 +292,9 @@ td span.event-date {
   font-size: 85%;
 }
 
-
+#project{
+  margin-top: 10px;
+}
 
 #project_list {
   margin-top: 10px;
@@ -345,15 +347,33 @@ td span.event-date {
 }
 
 
+#commit_header {
+  display: inline-block;
+}
 
 
+#commit_header_title {
+  float: left;
+  display: block;
+  font-size: 2em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
 
 
+.refresh_commits {
+  margin-left: 10px;
+  font-size: 1.3em;
+  margin-top: 7px;
+  float: left;
+}
 
+.refresh_commits:hover {
+  color: #268ED4;
+}
 
 #recent_commits {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .each_commit {
@@ -452,7 +472,7 @@ td span.event-date {
   text-shadow: 0 0 .25em rgba(255,255,255, .3);
 }
 
-.food_loading_spinning {
+.loading_spinning {
   -webkit-animation: loading 1.5s infinite linear;
           animation: loading 1.5s infinite linear;
 }
