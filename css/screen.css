@@ -295,8 +295,8 @@ td span.event-date {
 
 
 #project_list {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 130%;
 }
 
@@ -343,6 +343,65 @@ td span.event-date {
   border-top: 1px solid #BBBBBB;
   font-size: 110%;
 }
+
+
+
+
+
+
+
+
+#recent_commits {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.each_commit {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.commit_title {
+  display: inline-block;
+  width: 100%;
+}
+
+.commit_sha {
+  float: left;
+  margin-right: 9px;
+}
+
+.commit_time {
+  float: left;
+  margin-right: 9px;
+  color: #888;
+}
+
+.commit_repo_name {
+  float: right;
+}
+
+.commit_message {
+  text-align: justify;
+}
+
+
+.commit_sha:hover, .commit_repo_name:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #recent_post_header {
   font-size: 200%;
