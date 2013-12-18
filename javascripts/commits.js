@@ -19,7 +19,7 @@ function displayCommit() {
 	}
 
 	$('#recent_commits').slideDown(animation_time);
-    $('.refresh_commits').removeClass('loading_spinning');
+    $('.refresh_commits').delay(animation_time).removeClass('loading_spinning');
 	loading_commits = false;
 }
 
@@ -72,8 +72,8 @@ function updateCommits(events) {
 
 function showCommits() {
 	if (!loading_commits) {
-		$('.refresh_commits').addClass('loading_spinning');
 		loading_commits = true;
+		$('.refresh_commits').addClass('loading_spinning');
 
 		commits = [];
 		$.ajax({
