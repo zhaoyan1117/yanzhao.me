@@ -40,6 +40,7 @@ function parseCommit(commit) {
 		type:"GET",
 		url:commit.url,
 		dataType:"json",
+		cache:false,
 		success: function(data, textStatus, jqXHR) {
 			var parsed = {};
 			parsed.sha = data.sha.substr(0,7);
@@ -80,6 +81,7 @@ function showCommits() {
 		  type:"GET",
 		  url:"https://api.github.com/users/zhaoyan1117/events/public",
 		  dataType:"json",
+		  cache:false,
 		  success: function(data, textStatus, jqXHR){
 		  	pushEvents = data.filter(function(e) {return e.type == 'PushEvent'});
 		  	updateCommits(pushEvents);

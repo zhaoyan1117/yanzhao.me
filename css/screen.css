@@ -371,6 +371,7 @@ td span.event-date {
 
 .refresh_commits:hover {
   color: #268ED4;
+  cursor: pointer;
 }
 
 #recent_commits {
