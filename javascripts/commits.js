@@ -1,8 +1,6 @@
-function displayCommit() {
-	var animation_time = 500;
-	$('#recent_commits').slideUp(animation_time);
-	$('#recent_commits').html('');
+commit_animation_time = 500;
 
+function displayCommit() {
 	for(var i = 0; i < Math.min(commits.length, 5); i++) {
 		var commit = commits[i];
 		var html = "<div class='each_commit'> \
@@ -18,8 +16,21 @@ function displayCommit() {
   		$(html).appendTo('#recent_commits');
 	}
 
-	$('#recent_commits').slideDown(animation_time);
-    $('.refresh_commits').delay(animation_time).removeClass('loading_spinning');
+	endLoadingShowCommits();
+}
+
+function displayApiLimit() {
+	var html = "<div class='api_limit'>\
+  Woops! Github api only provides a limited access rate for unauthorized user. Your github api access is used up for this hour. Please go to <a href='https://github.com/zhaoyan1117'>my github</a> to see my commit activities. Thanks!\
+  </div>"
+
+	$(html).appendTo('#recent_commits');
+	endLoadingShowCommits();
+}
+
+function endLoadingShowCommits() {
+	$('#recent_commits').slideDown(commit_animation_time);
+	setTimeout(function(){$('.refresh_commits').removeClass('loading_spinning');}, commit_animation_time);
 	loading_commits = false;
 }
 
@@ -74,7 +85,9 @@ function updateCommits(events) {
 function showCommits() {
 	if (!loading_commits) {
 		loading_commits = true;
-		$('.refresh_commits').addClass('loading_spinning');
+		$('#recent_commits').slideUp(commit_animation_time);
+		setTimeout(function(){$('.refresh_commits').addClass('loading_spinning');}, commit_animation_time);
+		$('#recent_commits').html('');
 
 		commits = [];
 		$.ajax({
@@ -85,6 +98,11 @@ function showCommits() {
 		  success: function(data, textStatus, jqXHR){
 		  	pushEvents = data.filter(function(e) {return e.type == 'PushEvent'});
 		  	updateCommits(pushEvents);
+		  },
+		  error: function(jqXHR, textStatus, errorThrown) {
+		  	if (jqXHR.responseJSON.documentation_url == "http://developer.github.com/v3/#rate-limiting") {
+		  		displayApiLimit();
+		  	}
 		  }
 		});
 	}

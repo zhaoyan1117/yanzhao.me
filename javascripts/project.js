@@ -38,5 +38,4 @@ $(document).ready(function () {
 		$(this).css({"color": "black"});
 	});
 
-	showCommits();
 });

@@ -377,6 +377,11 @@ td span.event-date {
 #recent_commits {
 }
 
+.api_limit {
+  margin-top: 5px;
+  font-size: 120%;
+}
+
 .each_commit {
   width: 100%;
   padding-top: 10px;
