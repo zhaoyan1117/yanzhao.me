@@ -38,4 +38,9 @@ $(document).ready(function () {
 		$(this).css({"color": "black"});
 	});
 
+	$(window).load(function() {
+		$('.show_proj_loading').fadeOut(1000);
+		$('.show_proj_content').delay(1000).fadeIn(1000);
+	});
+
 });

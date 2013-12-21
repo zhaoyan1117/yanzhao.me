@@ -321,14 +321,15 @@ td span.event-date {
 .show_proj_name {
   text-align: center;
   font-size: 130%;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .show_proj_desc {
   font-size: 110%;
   line-height: 1.5em;
   text-align: justify;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #BBBBBB;
 }
 
 .show_proj_desc a {
@@ -338,14 +339,25 @@ td span.event-date {
 
 .show_proj_lang {
   text-align: center;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .show_proj_content {
-  border-top: 1px solid #BBBBBB;
+  display: none;
   font-size: 110%;
 }
 
+.show_proj_loading{
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 1.5em;
+  text-shadow: 0 0 .25em rgba(255,255,255, .3);
+  -webkit-animation: loading 1.5s infinite linear;
+          animation: loading 1.5s infinite linear;
+}
 
 #commit_header {
   display: inline-block;
