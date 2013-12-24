@@ -424,22 +424,18 @@ td span.event-date {
   text-align: justify;
 }
 
-
 .commit_sha:hover, .commit_repo_name:hover {
   text-decoration: underline;
 }
 
+.about_linkedin {
+  color: rgb(100, 100, 100);
+}
 
-
-
-
-
-
-
-
-
-
-
+.about_linkedin:hover {
+  text-decoration: none;
+  color: #268ED4;
+}
 
 #recent_post_header {
   font-size: 200%;

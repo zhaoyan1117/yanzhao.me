@@ -23,11 +23,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-linkedin:before {
+	content: "\e601";
+}
 .icon-food:before {
-	content: "\e600";
+	content: "\e602";
 }
 .icon-github:before {
-	content: "\e602";
+	content: "\e603";
 }
 .icon-info:before {
 	content: "\e604";
@@ -36,14 +39,14 @@
 	content: "\e605";
 }
 .icon-quill:before {
-	content: "\e603";
+	content: "\e606";
 }
 .icon-stack:before {
-	content: "\e601";
-}
-.icon-spinner:before {
 	content: "\e607";
 }
+.icon-spinner:before {
+	content: "\e608";
+}
 .icon-cc:before {
-	content: "\e606";
+	content: "\e609";
 }
