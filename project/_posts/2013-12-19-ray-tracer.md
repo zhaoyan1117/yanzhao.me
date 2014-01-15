@@ -10,7 +10,7 @@ lang: [c++, openmp]
 description: |
     This project along is part of my final project for CS184-Computer Graphics at Berkeley. We created this ray tracer renderer with "photon mapping" technique to achieve various realistic effects. This renderer could take serialized data from our <a href="/project/cloth_sim/">cloth simulator</a>.
 ---
-<img src="../../images/projects/ray_tracer/gi.png" class="show_proj_img">
+<img src="../../images/projects/ray_tracer/gi_min.jpg" class="show_proj_img">
 Global Illumination
 200k Photons, 20k Caustic Photons, 150 Final Gather Rays
 <br>
@@ -31,17 +31,17 @@ We solved this problem by dynamically control the number of final gather ray-tha
 
 Below are some sample images we generated.
 
-<img src="../../images/projects/ray_tracer/di.png" class="show_proj_img">
+<img src="../../images/projects/ray_tracer/di_min.jpg" class="show_proj_img">
 Direct illumination
 100 Soft Shadow Rays
 <br>
 
-<img src="../../images/projects/ray_tracer/ii.png" class="show_proj_img">
+<img src="../../images/projects/ray_tracer/ii_min.jpg" class="show_proj_img">
 Indirect Illumination (Multiple Diffuse Reflections)
 200k Photons, 150 Final Gather Rays
 <br>
 
-<img src="../../images/projects/ray_tracer/di_ca.png" class="show_proj_img">
+<img src="../../images/projects/ray_tracer/di_ca_min.jpg" class="show_proj_img">
 Direct Illumination + Caustics
 200k Photons, 20k Caustic Photons
 <br>
