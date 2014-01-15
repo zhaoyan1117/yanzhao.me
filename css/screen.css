@@ -345,6 +345,7 @@ td span.event-date {
 .show_proj_content {
   display: none;
   font-size: 110%;
+  text-align: justify;
 }
 
 .show_proj_loading{
@@ -359,10 +360,13 @@ td span.event-date {
           animation: loading 1.5s infinite linear;
 }
 
+.show_proj_img {
+  width: 100%;
+}
+
 #commit_header {
   display: inline-block;
 }
-
 
 #commit_header_title {
   float: left;

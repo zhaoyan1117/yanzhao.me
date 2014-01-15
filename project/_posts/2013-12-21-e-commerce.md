@@ -9,5 +9,5 @@ name: Multitenancy e-commerce platform
 short_desc: Project for summer internship at GoDaddy.com, LLC
 lang: [rails, ruby, javascript, html5, mysql]
 description: |
-    I have interned in the Presence and Commerce team at GoDaddy.com, LLC, and this is the projct I have participated.
+    I have interned in the Presence and Commerce team at GoDaddy.com, LLC, and this is the project I have participated.
 ---
