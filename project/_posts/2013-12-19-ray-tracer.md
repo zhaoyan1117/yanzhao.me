@@ -8,7 +8,7 @@ name: Global Illumination Ray Tracer with Indirect Illumination by Photon Mappin
 short_desc: Final project for CS184-Computer Graphics at Berkeley
 lang: [c++, openmp]
 description: |
-    This project along is part of my final project for CS184-Computer Graphics at Berkeley. We created this ray tracer renderer with "photon mapping" technique to achieve various realistic effects. This renderer could take serialized data from our <a href="/project/cloth_sim/">cloth simulator</a>.
+    This project along is part of our final project for CS184-Computer Graphics at Berkeley. We created this ray tracer renderer with "photon mapping" technique to achieve various realistic effects. This renderer could take serialized data from our <a href="/project/cloth_sim/">cloth simulator</a>.
 ---
 <img src="../../images/projects/ray_tracer/gi_min.jpg" class="show_proj_img">
 Global Illumination
@@ -53,10 +53,13 @@ Special Effect-Glossy Surface
 
 Here are two videos showing rendered cloth simulation videos.
 <iframe width="100%" height="400" src="http://www.youtube.com/embed/vHHDwwqTLlc?vq=hd720&rel=0&theme=light" frameborder="0"></iframe>
-Breeze
+*Breeze*
 
 <iframe width="100%" height="400" src="http://www.youtube.com/embed/IsyFa5dMyHM?vq=hd720&rel=0&theme=light" frameborder="0"></iframe>
-Gravity
+*Gravity*
 
 One final note, except [AABB](http://kreationsedge.net/?page_id=27) acceleration data structure, we also use [OpenMP](http://openmp.org/wp/) to accelerate rendering, and this technique works 
 quite well on the departments' [hive machines](http://inst.eecs.berkeley.edu/cgi-bin/clients.cgi?choice=330soda).
+
+**Acknowledgments**:
+During the development of this project, we are instructed by Professor [James O'Brien](http://www.cs.berkeley.edu/~job/Prof._James_F._OBrien/Home.html) and our GSI [Jiamin Bai](http://www.eecs.berkeley.edu/~bjiamin/About%20Me.html) and [Brandon Wang](http://brandonwang.net/). We have also gained instructions from Professor [Henrik Wann Jensen](http://graphics.ucsd.edu/~henrik/)'s [_Practical Guide to Global Illumination_](http://graphics.stanford.edu/courses/cs348b-00/course8.pdf), Doctor Frank Suykens's [_On robust Monte Carlo algorithms for multi-pass global illumination_](http://graphics.cs.kuleuven.be/publications/phdSuykens/), and Zack Waters's [_Report on Photon Mapping_](http://web.cs.wpi.edu/~emmanuel/courses/cs563/write_ups/zackw/photon_mapping/PhotonMapping.html).
