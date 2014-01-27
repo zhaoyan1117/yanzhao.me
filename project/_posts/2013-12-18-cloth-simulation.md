@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: project/cloth_sim/
+permalink: project/clothsim/
 
 display_id: cloth_sim
 
@@ -8,7 +8,7 @@ name: Cloth Simulation with Finite Element Method
 short_desc: Final Project for CS184-Computer Graphics at Berkeley
 lang: [c++, openmp]
 description: |
-    This project along is part of our final project for CS184-Computer Graphics at Berkeley. We implemented a physical based simulator for cloth using finite element methods; we have also serialized the output of our cloth simulator into a <a href="/project/ray_tracer/">global illumination renderer</a> we created.
+    This project along is part of our final project for CS184-Computer Graphics at Berkeley. We implemented a physical based simulator for cloth using finite element methods; we have also serialized the output of our cloth simulator into a <a href="/project/raytracer/">global illumination renderer</a> we created.
 ---
 Demo of simulated cloth 
 <iframe width="100%" height="400" src="http://www.youtube.com/embed/ZoV2t9AIRNA?vq=hd720&rel=0&theme=light" frameborder="0"></iframe>
@@ -89,7 +89,7 @@ We use [verlet integration](http://en.wikipedia.org/wiki/Verlet_integration) sin
 
 FEM cloth simulation is implemented with [OpenMP](http://openmp.org/wp/) to accelerate the calculation speed in each timestep.
 
-Also, our simulator could output each frame as an image file or an .obj file, and **the obj data file could be serialized into our [global illumination renderer](/project/ray_tracer/)**.
+Also, our simulator could output each frame as an image file or an .obj file, and **the obj data file could be serialized into our [global illumination renderer](/project/raytracer/)**.
 
 Here are two videos showing rendered cloth simulation videos.
 <iframe width="100%" height="400" src="http://www.youtube.com/embed/vHHDwwqTLlc?vq=hd720&rel=0&theme=light" frameborder="0"></iframe>

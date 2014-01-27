@@ -1,7 +1,7 @@
 ---
 notice: "The content and layout of this page is still under construction."
 layout: project
-permalink: project/e_commerce/
+permalink: project/ecommerce/
 
 display_id: nemo
 

@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: project/ray_tracer/
+permalink: project/raytracer/
 
 display_id: ray_tracer
 
@@ -8,7 +8,7 @@ name: Global Illumination Ray Tracer with Indirect Illumination by Photon Mappin
 short_desc: Final project for CS184-Computer Graphics at Berkeley
 lang: [c++, openmp]
 description: |
-    This project along is part of our final project for CS184-Computer Graphics at Berkeley. We created this ray tracer renderer with "photon mapping" technique to achieve various realistic effects. This renderer could take serialized data from our <a href="/project/cloth_sim/">cloth simulator</a>.
+    This project along is part of our final project for CS184-Computer Graphics at Berkeley. We created this ray tracer renderer with "photon mapping" technique to achieve various realistic effects. This renderer could take serialized data from our <a href="/project/clothsim/">cloth simulator</a>.
 ---
 <img src="../../images/projects/ray_tracer/gi_min.jpg" class="show_proj_img">
 Global Illumination
@@ -49,7 +49,7 @@ Direct Illumination + Caustics
 <img src="../../images/projects/ray_tracer/gf.png" class="show_proj_img">
 Special Effect-Glossy Surface
 
-**Our renderer could also take serialized data in .obj format from our <a href="/project/cloth_sim/">cloth simulator</a>, which is another part of this dual project.**
+**Our renderer could also take serialized data in .obj format from our <a href="/project/clothsim/">cloth simulator</a>, which is another part of this dual project.**
 
 Here are two videos showing rendered cloth simulation videos.
 <iframe width="100%" height="400" src="http://www.youtube.com/embed/vHHDwwqTLlc?vq=hd720&rel=0&theme=light" frameborder="0"></iframe>

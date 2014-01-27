@@ -1,7 +1,7 @@
 ---
 notice: "The content and layout of this page is still under construction."
 layout: project
-permalink: project/routing_protocal/
+permalink: project/routingprotocal/
 
 display_id: routing_protocal
 
