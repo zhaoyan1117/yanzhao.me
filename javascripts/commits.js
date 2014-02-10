@@ -21,7 +21,8 @@ function displayCommit() {
 
 function displayApiLimit() {
 	var html = "<div class='api_limit'>\
-  Woops! Github api only provides a limited access rate for unauthorized user. Your github api access is used up for this hour. Please go to <a href='https://github.com/zhaoyan1117'>my github</a> to see my commit activities. Thanks!\
+  Woops! Github api only provides a limited access rate for unauthorized user. <br>\
+  Come <a href='https://github.com/zhaoyan1117?tab=activity'>here</a> to see my recent commits. Thanks!\
   </div>"
 
 	$(html).appendTo('#recent_commits');
