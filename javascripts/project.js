@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 	$(".project_name").hover(
 		function(){
 			var project_list_response_time = 200;
@@ -27,20 +26,19 @@ $(document).ready(function () {
 		}
 	);
 
-	loading_commits = false;
-	$(".refresh_commits").click(showCommits);
+	// loading_commits = false;
+	// $(".refresh_commits").click(showCommits);
 
-	$(".refresh_commits").hover(function() {
-		if (!loading_commits) {
-			$(this).css({"color": "#268ED4"});
-		}
-	}, function(){
-		$(this).css({"color": "black"});
-	});
+	// $(".refresh_commits").hover(function() {
+	// 	if (!loading_commits) {
+	// 		$(this).css({"color": "#268ED4"});
+	// 	}
+	// }, function(){
+	// 	$(this).css({"color": "black"});
+	// });
 
 	$(window).load(function() {
 		$('.show_proj_loading').fadeOut(1000);
 		$('.show_proj_content').delay(1000).fadeIn(1000);
 	});
-
 });

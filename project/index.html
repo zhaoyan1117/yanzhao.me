@@ -2,6 +2,7 @@
 layout: default
 title: "Project"
 ---
+<!--
 <div id="commit_header">
   <div id="commit_header_title">Recent Public Commits</div><div class="refresh_commits icon-spinner"></div>
 </div>
@@ -12,6 +13,7 @@ title: "Project"
     showCommits();
   });
 </script>
+-->
 
 <div id="project">
   <h1>Project</h1>
@@ -19,15 +21,15 @@ title: "Project"
     {% for post in site.categories.project %}
       <div class="each_project">
         <a href="{{post.url}}">
-          <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>  
+          <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>
         </a>
-      
+
         <div class="project_description" id="{{post.display_id}}">
           {{post.short_desc}}
           <div class="project_lang_photo">
             {% for l in post.lang %}
               <img src="../images/logos/{{l}}.png" height="35" width"35">
-            {% endfor %}  
+            {% endfor %}
           </div>
         </div>
       </div>
