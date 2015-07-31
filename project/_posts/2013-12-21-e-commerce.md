@@ -5,7 +5,7 @@ permalink: project/ecommerce/
 display_id: nemo
 
 name: Multitenancy e-commerce platform
-short_desc: Project for summer internship at GoDaddy.com, LLC
+short_desc: Project for my summer internship at GoDaddy.com, LLC
 lang: [rails, ruby, javascript, html5, mysql]
 description: |
     I have interned in the Presence and Commerce department at GoDaddy.com, LLC, and this is the project I have participated.
@@ -30,10 +30,10 @@ After the evaluation, we have generated reports to discuss the situation of each
 
 
 <h3 id="nemo_implementation">Implementation</h3>
-After the evaluation of e-commerce frameworks, I have participated in the development of our e-commerce product. Below are some major parts I have contributed: 
+After the evaluation of e-commerce frameworks, I have participated in the development of our e-commerce product. Below are some major parts I have contributed:
 
 ####Database Routing
-Our e-commerce product is a multi-tenancy SaaS application. Due to the design and legacy code issues, our approach in database design is to create **one database per tenant**; also, in order to make the architecture more scalable, we want to distribute tenant databased in different physical database servers. Thus, we have to route each incoming request to correct tenant database. 
+Our e-commerce product is a multi-tenancy SaaS application. Due to the design and legacy code issues, our approach in database design is to create **one database per tenant**; also, in order to make the architecture more scalable, we want to distribute tenant databased in different physical database servers. Thus, we have to route each incoming request to correct tenant database.
 
 My primary contribution here was to update an database routing library to fit our needs as described above. The approach is to insert a [middleware](http://guides.rubyonrails.org/rails_on_rack.html) to connect active record to the correct database before the request hitting the rails stack. Thus, an abstraction could be created to let module out the database routing functionality from the e-commerce app features.
 
