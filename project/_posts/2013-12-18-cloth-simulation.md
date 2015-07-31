@@ -6,11 +6,11 @@ display_id: cloth_sim
 
 name: Cloth Simulation with Finite Element Method
 short_desc: Final Project for CS184-Computer Graphics at Berkeley
-lang: [c++, openmp]
+lang: [c++, openmp, opengl]
 description: |
     This project along is part of our final project for CS184-Computer Graphics at Berkeley. We implemented a physical based simulator for cloth using finite element methods; we have also serialized the output of our cloth simulator into a <a href="/project/raytracer/">global illumination renderer</a> we created.
 ---
-Demo of simulated cloth 
+Demo of simulated cloth
 <iframe width="100%" height="400" src="http://www.youtube.com/embed/ZoV2t9AIRNA?vq=hd720&rel=0&theme=light" frameborder="0"></iframe>
 
 For the Mass-Spring Cloth Simulation, we use the following equations to calculate the force vector between two connected masses:
@@ -31,9 +31,9 @@ Below are the equations we used for FEM cloth simulation:
 **Mesh Deformation Condition**:
 <div>
 $$
-\textbf{C}(\textbf{x}) = a \left(             
+\textbf{C}(\textbf{x}) = a \left(
     \begin{matrix}
-      \|\textbf{w}_{u}(\textbf{x})\| - b_{u} \\ 
+      \|\textbf{w}_{u}(\textbf{x})\| - b_{u} \\
       \|\textbf{w}_{v}(\textbf{x})\| - b_{v} \\
     \end{matrix}
 \right)
@@ -43,7 +43,7 @@ $$
 **Stretching Force**:
 <div>
 $$
-\textbf{f}_{i} = - \frac{\partial \textit{E}_{C}}{\partial \textbf{x}_i} = - k \frac{\partial \textbf{C}(\textbf{x})}{\partial \textbf{x}_i}\textbf{C}(\textbf{x}) 
+\textbf{f}_{i} = - \frac{\partial \textit{E}_{C}}{\partial \textbf{x}_i} = - k \frac{\partial \textbf{C}(\textbf{x})}{\partial \textbf{x}_i}\textbf{C}(\textbf{x})
 $$
 </div>
 
