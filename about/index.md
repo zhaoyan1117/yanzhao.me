@@ -11,7 +11,7 @@ I have acquired most of my computer science knowledge from [UC Berkeley](http://
 
 If you are interested in my work and want to learn more, feel free to [drop me a line](mailto:zhaoyan1117@gmail.com). Or if you want to take a look at my resume, please [contact][resume_request] me and I will get back to you.
 
-[CG]: /project/cloth_sim
-[SaaS]: /project/peakdemand
+[CG]: /project/raytracer
+[SaaS]: /project/ecommerce
 [SL]: /project/nnet
 [resume_request]: mailto:zhaoyan1117@gmail.com?subject=[Resume]&body=I%20would%20like%20a%20copy%20of%20your%20resume.%0A%0AThanks.
