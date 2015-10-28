@@ -67,7 +67,6 @@
           <section>
             <h2>Problem</h2>
             <p>Image manipulation tools have become widespread and it is <span class='hl'>easy for an ordinary user</span> to manipulate images</p>
-            <p>On the other hand, image manipulation <span class="hl">detection</span> is way <span class='hl'>falling behind</span></p>
             <h3 class="fragment">We want to explore existing technologies, and come up with more efficient methods and tools for image manipulation detections.</h3>
           </section>
         </section>
@@ -114,7 +113,7 @@
             <img class="dct-eq" data-src="images/dct_equation.png">
             <div class='qt-images images-three'>
               <img class="fragment fade-in dct-g" data-src="images/dct_g.png">
-              <img class="fragment fade-in dct-q" data-src="images/dct_q.png">
+              <img class="dct-q" data-src="images/dct_q.png">
               <img class="fragment fade-in dct-b" data-src="images/dct_b.png">
             </div>
           </section>
@@ -209,6 +208,12 @@
 
           <section>
             <h2>Error Level Analysis</h2>
+            <h4>Problem</h4>
+            <p>High frequency region, even not tampered, will have a big change in error level.</p>
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
             <h4>Low Frequency Mask</h4>
             <img width="600" data-src="images/cattle_low_freq.jpeg">
           </section>
@@ -219,6 +224,15 @@
             <h2>Copymove detection</h2>
             <h4>Problem</h4>
             <img width="300" data-src="images/sea_copy.jpg">
+          </section>
+
+          <section>
+            <h2>Copymove detection</h2>
+            <h4>Existing techniques</h4>
+            <ul>
+              <li>Transform image to frequency domain</li>
+              <li>Check similary between each frequency domain block</li>
+            </ul>
           </section>
 
           <section>
@@ -240,6 +254,16 @@
         </section>
 
         <section>
+          <section>
+            <h2>Put everything together</h2>
+            <h4>Convolutional Neural Network</h4>
+            <ul>
+              <li>Feed a given image to all the methods above.</li>
+              <li>Treat the output of each methods as a channel(channels).</li>
+              <li>Use this augmented image <span class="hl">7 channels</span> as input of neural network.</li>
+            </ul>
+          </section>
+
           <section>
             <h2>Put everything together</h2>
             <h4>Neural Network</h4>
