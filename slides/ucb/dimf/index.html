@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Digital Image Manipulation Forensics</title>
+    <meta name="description" content="Presentation of our master project at UCB">
+    <meta name="author" content="Yan Zhao">
+    <meta name="author" content="Anthony Sutardja">
+    <meta name="author" content="Omar Ramadan">
+    <meta name="advisor" content="James F. O'Brien">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="/slides/revealjs/css/reveal.css">
+    <link rel="stylesheet" href="/slides/revealjs/css/theme/solarized.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="/slides/revealjs/lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '/slides/revealjs/css/print/pdf.css' : '/slides/revealjs/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Customized style -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <h2>Digital Image Manipulation Forensics</h2>
+          <h4>UC Berkeley Master of Engineering Capstone Project</h4>
+          <p>Yan Zhao, Anthony Sutardja, Omar Ramadan</p>
+          <p class='hl'>Advisor: Professor James F. O'Brien</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Problem</h2>
+            <p class="fragment">Image manipulation tools have become widespread and it is <span class='hl'>easy for an ordinary user</span> to manipulate images</p>
+            <p class="fragment">On the other hand, image manipulation detection services are way <span class='hl'>falling behind</span></p>
+          </section>
+
+          <section>
+            <h3>Fake images litter the Internet</h3>
+            <img width="750" data-src="images/fbgirl.jpg">
+            <p class='source'>Source: Facebook.com</p>
+          </section>
+
+          <section>
+            <h3>At times even make their way into the mainstream press</h3>
+            <img width="750" data-src="images/obama.png">
+            <p class='source'>Source: The New York Times</p>
+          </section>
+
+          <section>
+            <h3>How reliable is the information we accept as truth</h3>
+            <img width="850" data-src="images/iraq.png">
+            <p class='source'>Source: The New York Times</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Current techniques</h2>
+          <p class="fragment highlight-red">Format-based forgery detection</p>
+          <p class="fragment highlight-red">Pixel-based forgery detection</p>
+          <p>Physical environment-based forgery detection</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>JPEG Image Format</h2>
+            <ol>
+              <li>Block Splitting</li>
+              <li>Discrete Cosine Transformation</li>
+              <li>Quantization</li>
+              <li>Entropy Encoding</li>
+            </ol>
+          </section>
+          <section>
+            <h2>JPEG Image Format</h2>
+            <h4>1. Block Splitting</h4>
+            <div class='block-splitting-images images-three'>
+              <img class="fragment fade-in img-orig" data-src="images/bruin.jpg">
+              <img class="fragment fade-in img-block" data-src="images/bruin_block.png">
+              <img class="fragment fade-in block" data-src="images/blocks.png">
+            </div>
+          </section>
+
+          <section>
+            <h2>JPEG Image Format</h2>
+            <h4>2. Discrete Cosine Transformation</h4>
+            <div class='dct-images images-two'>
+              <img class="fragment fade-in img-block" data-src="images/blocks.png">
+              <img class="fragment fade-in dct-block" data-src="images/dct.png">
+            </div>
+          </section>
+
+          <section>
+            <h2>JPEG Image Format</h2>
+            <h4>3. Quantization</h4>
+            <img class="dct-eq" data-src="images/dct_equation.png">
+            <div class='qt-images images-three'>
+              <img class="fragment fade-in dct-g" data-src="images/dct_g.png">
+              <img class="fragment fade-in dct-q" data-src="images/dct_q.png">
+              <img class="fragment fade-in dct-b" data-src="images/dct_b.png">
+            </div>
+          </section>
+
+          <section>
+            <h2>JPEG Image Format</h2>
+            <h4>4. Entropy Encoding</h4>
+            <p>Run length encoding</p>
+            <p>Huffman coding</p>
+            <p>...</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Blocking Artifact Measurement</h2>
+            <h4>How to do it</h4>
+            <p>
+              $$B(i) = \sum_{k=1}^{64}|D(k)-Q(k)\text{ round}(\frac{D(k)}{Q(k)})|$$
+            </p>
+            <p>
+              $$\text{BAM} = \frac{1}{N}\sum_{i}B(i)$$
+            </p>
+          </section>
+
+          <section>
+            <h2>Blocking Artifact Measurement</h2>
+            <h4>Demo</h4>
+            <div class='images-two'>
+              <img data-src="images/bam_img.jpg">
+              <img data-src="images/bam.jpg">
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>What it is</h4>
+            <ul>
+              <li>
+                <span class="hl">Error level</span> is how much an image has been compressed
+              </li>
+              <li>
+                Change of <span class="hl">Error level</span> is not linear
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>How to do it</h4>
+            <ul>
+              <li>Resave the <span class="hl">given image</span> with a known compression (90%)</li>
+              <li>Measure the difference in pixel value between the <span class="hl">resaved image</span> and the <span class="hl">given image</span></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>Demo</h4>
+            <div class='images-three'>
+              <img data-src="images/cattle.jpg">
+              <img data-src="images/cattle_copy.png">
+              <img data-src="images/cattle_ela.png">
+            </div>
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>Mean of ELA values</h4>
+            <div class='images-two'>
+              <img data-src="images/au_mean.png">
+              <img data-src="images/ma_mean.png">
+            </div>
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>Variance of ELA values</h4>
+            <div class='images-two'>
+              <img data-src="images/au_var.png">
+              <img data-src="images/ma_var.png">
+            </div>
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>Random Forrest with Adaptive Boosting</h4>
+            <img width="550" data-src="images/decision_boundary.png">
+          </section>
+
+          <section>
+            <h2>Error Level Analysis</h2>
+            <h4>Low Frequency Mask</h4>
+            <img width="600" data-src="images/cattle_low_freq.jpeg">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Copymove detection</h2>
+            <h4>Problem</h4>
+            <img width="300" data-src="images/sea_copy.jpg">
+          </section>
+
+          <section>
+            <h2>Copymove detection</h2>
+            <h4>Process</h4>
+            <p>Reverse engineering from panorama picture</p>
+            <p>Picking <span class="hl">interest points</span> - <span class="hl">Harris Corner</span></p>
+            <p>Match between each pair for points</p>
+          </section>
+
+          <section>
+            <h2>Copymove detection</h2>
+            <h4>Results</h4>
+            <div class='cm-row'>
+              <img class="cm-l" data-src="images/sea.jpg">
+              <img class="cm-r" data-src="images/sea_copymove.jpg">
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Put everything together</h2>
+            <h4>Neural Network</h4>
+            <img data-src="images/neural.jpeg">
+          </section>
+
+          <section>
+            <h2>Put everything together</h2>
+            <h4>Convolutional Neural Network</h4>
+            <img data-src="images/cnn.jpeg">
+          </section>
+
+          <section>
+            <h2>Put everything together</h2>
+            <h4>Input data</h4>
+            <img width="600" style="background: white;" data-src="images/nnet_input.png">
+          </section>
+        </section>
+
+        <section data-transition="slide none">
+          <h2>Resources</h2>
+          <ul>
+            <li>
+              <span class="hl">Thesis:</span> http://bit.ly/dimfYanThesis
+            </li>
+            <li>
+              <span class="hl">Code:</span> http://bit.ly/dimfCode
+            </li>
+            <li>
+              <span class="hl">Web Service:</span> http://bit.ly/dimfWebService
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="none">
+          <h2>Resources</h2>
+          <ul>
+            <li>
+              <span class="hl">Thesis:</span> http://bit.ly/dimfYanThesis
+            </li>
+            <li>
+              <span class="hl">Code:</span> http://bit.ly/dimfCode
+            </li>
+            <li>
+              <span class="hl">Web Service:</span> http://bit.ly/dimfWebService
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="none">
+          <h2>Resources</h2>
+          <ul>
+            <li>
+              <span class="hl">Thesis:</span> http://bit.ly/dimfYanThesis
+            </li>
+            <li>
+              <span class="hl">Code:</span> http://bit.ly/dimfCode
+            </li>
+            <li>
+              <span class="hl">Web Service:</span> http://bit.ly/dimfWebService
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script src="/slides/revealjs/lib/js/head.min.js"></script>
+    <script src="/slides/revealjs/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: false,
+        slideNumber: true,
+        transition: 'slide',
+        math: {
+          mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+        dependencies: [
+          { src: '/slides/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/slides/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/slides/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/slides/revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '/slides/revealjs/plugin/zoom-js/zoom.js', async: true },
+          { src: '/slides/revealjs/plugin/notes/notes.js', async: true },
+          { src: '/slides/revealjs/plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>

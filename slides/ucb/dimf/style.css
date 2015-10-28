@@ -1,0 +1,78 @@
+.source {
+  margin-top: 0px !important;
+  font-size: 14px !important;
+  opacity: 0.5 !important;
+}
+
+.hl {
+  color: #816579 !important;
+}
+
+.reveal .slides section .fragment.highlight-red.visible {
+  color: #816579;
+}
+
+.reveal .slide-number {
+  font-size: 20px;
+}
+
+.images-three img {
+  float: left;
+  margin-left: 1% !important;
+  width: 31%;
+}
+
+.images-two img {
+  float: left;
+  margin-left: 1% !important;
+  width: 48%;
+}
+
+.images-two:after,
+.images-three:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.block-splitting-images .img-orig {
+  border: 1px solid #657b83 !important;
+}
+
+.block-splitting-images .img-block {
+  border: 1px solid #657b83 !important;
+}
+
+.block-splitting-images .block {
+  border: 4px solid rgb(46, 174, 216) !important;
+}
+
+.dct-images .img-block {
+  border: 1px solid #657b83 !important;
+}
+
+.dct-images .dct-block {
+  border: 1px solid #657b83 !important;
+}
+
+.dct-g, .dct-b, .dct-q, .dct-eq {
+  box-shadow: none !important;
+  border: 0px !important;
+}
+
+.cm-row img {
+  float: left;
+  width: 48%;
+}
+
+.cm-l {
+  width: 300px !important;
+  float: left !important;
+  margin-left: 50px !important;
+}
+
+.cm-r {
+  width: 300px !important;
+  float: right !important;
+  margin-right: 50px !important;
+}
