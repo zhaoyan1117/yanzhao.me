@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+      html {
+        height: 100%;
+        min-height: 768px;
+        overflow: hidden;
+      }
+      body {
+        height: 100%;
+        margin: 0px;
+        overflow: hidden;
+      }
+      #content {
+        height: 100%;
+        width: 80%;
+        min-width: 180px;
+        max-width: 520px;
+        margin: 0px auto;
+      }
+      #header, #footer {
+        height: 7%;
+        width: 100%;
+        padding: 0px 8px;
+      }
+       #header #find-apt, #footer #more-tweets {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @media (max-width: 736px) {
+        #content {
+          width: 100%;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id='content'>
+      <div id='header'>
+        <a id="find-apt" href="#" class="btn btn-danger btn-lg btn-block" role="button">Find GreyStar Apartments</a>
+      </div>
+      <a class="twitter-timeline" 
+         href="https://twitter.com/search?q=to%3AGreystarApts%20OR%20to%3AGreystarLiving" 
+         data-widget-id="740268839183601664"
+         data-chrome="noheader nofooter"
+         data-title="haha"
+         data-height="85%"
+         data-width="100%">
+        Tweets about to:GreystarApts OR to:GreystarLiving
+      </a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div id='footer'>
+        <a id="more-tweets" href="#" class="btn btn-danger btn-lg btn-block" role="button">See older tweets on Twitter</a>
+      </div>
+    </div>
+  </body>
+</html>
+
