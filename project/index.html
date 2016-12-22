@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Project"
-notice: "The content and layout of this page is still under construction."
 ---
 <!--
 <div id="commit_header">
@@ -21,9 +20,15 @@ notice: "The content and layout of this page is still under construction."
   <div id="project_list">
     {% for post in site.categories.project %}
       <div class="each_project">
-        <a href="{{post.url}}">
-          <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>
-        </a>
+        {% if post.externallink %}
+          <a href="{{post.externallink}}" target="_blank">
+            <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>
+          </a>
+        {% else %}
+          <a href="{{post.url}}">
+            <div class="project_name" data-desc="#{{post.display_id}}">{{post.name}}</div>
+          </a>
+        {% endif %}
 
         <div class="project_description" id="{{post.display_id}}">
           {{post.short_desc}}
